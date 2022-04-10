@@ -13,14 +13,8 @@
     />
   </head>
   <body>
-    <!-- 
-    Cargar un video desde una carpeta local del PC.
-
-        Control de errores: No deben cargarse ficheros que no sean del tipo correcto.
-        Mensaje de aviso al usuario mientras el video se carga, ya que puede demorar unos minutos.
-    -->
-
     <div class="container">
+      <!-- Input -->
       <div class="upload">
         <h2>Reproductor de video</h2>
         <form>
@@ -31,9 +25,14 @@
             accept=".webm,.mp4,.ogv"
           />
         </form>
+        <!-- Alerta de formato -->
         <p class="alert hidden"></p>
       </div>
+
+      <!-- Loader de carga -->
       <div class="loader hidden"></div>
+
+      <!-- Video -->
       <div>
         <video id="video"></video>
         <div id="controls" class="controls">
@@ -51,6 +50,7 @@
           </button>
         </div>
       </div>
+      
     </div>
     <script src="js/script.js"></script>
   </body>

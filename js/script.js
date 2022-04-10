@@ -5,12 +5,14 @@ const video = document.getElementById("video");
 const loader = document.querySelector(".loader");
 const alert = document.querySelector('.alert');
 
+// Chequear si el navegador utilizado soporta File API
 if (window.File && window.FileReader && window.FileList && window.Blob) {
-  function setVideoSrc(e) {
+    // Setear fichero ingresado como 'src' de video
+    function setVideoSrc(e) {
     e.preventDefault();
     const file = e.target.files[0];
     const reader = new FileReader();
-
+    
     // Chequear extensión de fichero
     const validFileExtensions = ['webm','mp4','ogv']
     const filePath = videoSrc.value;
